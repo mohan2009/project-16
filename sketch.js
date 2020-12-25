@@ -31,12 +31,14 @@ function setup() {
   obstacleGroup = new Group()
   FoodGroup= new Group()
 
+
 }
 
 
 function draw() {
  background('white')
  text("Score: "+ score, 200,100);
+ text('mam rock is big in debug',250,50)
  if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
@@ -86,6 +88,8 @@ function obstacle(){
     rock.velocityX = -(6 + 3*score/100);
     rock.scale=0.2
      obstacleGroup.add(rock)
+     rock.debug=true
+
     }
    
 }
